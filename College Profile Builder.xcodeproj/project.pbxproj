@@ -15,6 +15,7 @@
 		0B9DCEE91E4A3BD800FC731F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9DCEE71E4A3BD800FC731F /* LaunchScreen.storyboard */; };
 		0B9DCEF41E4A3BD800FC731F /* College_Profile_BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9DCEF31E4A3BD800FC731F /* College_Profile_BuilderTests.swift */; };
 		0B9DCEFF1E4A3BD800FC731F /* College_Profile_BuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9DCEFE1E4A3BD800FC731F /* College_Profile_BuilderUITests.swift */; };
+		0B9DCF0D1E4B85CF00FC731F /* Colleges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9DCF0C1E4B85CF00FC731F /* Colleges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0B9DCEFA1E4A3BD800FC731F /* College Profile BuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "College Profile BuilderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9DCEFE1E4A3BD800FC731F /* College_Profile_BuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Profile_BuilderUITests.swift; sourceTree = "<group>"; };
 		0B9DCF001E4A3BD800FC731F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B9DCF0C1E4B85CF00FC731F /* Colleges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colleges.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				0B9DCEDC1E4A3BD700FC731F /* AppDelegate.swift */,
 				0B9DCEDE1E4A3BD800FC731F /* MasterViewController.swift */,
 				0B9DCEE01E4A3BD800FC731F /* DetailViewController.swift */,
+				0B9DCF0C1E4B85CF00FC731F /* Colleges.swift */,
 				0B9DCEE21E4A3BD800FC731F /* Main.storyboard */,
 				0B9DCEE51E4A3BD800FC731F /* Assets.xcassets */,
 				0B9DCEE71E4A3BD800FC731F /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				0B9DCEE11E4A3BD800FC731F /* DetailViewController.swift in Sources */,
 				0B9DCEDF1E4A3BD800FC731F /* MasterViewController.swift in Sources */,
 				0B9DCEDD1E4A3BD700FC731F /* AppDelegate.swift in Sources */,
+				0B9DCF0D1E4B85CF00FC731F /* Colleges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +513,7 @@
 				0B9DCF051E4A3BD800FC731F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B9DCF061E4A3BD800FC731F /* Build configuration list for PBXNativeTarget "College Profile BuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				0B9DCF081E4A3BD800FC731F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B9DCF091E4A3BD800FC731F /* Build configuration list for PBXNativeTarget "College Profile BuilderUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				0B9DCF0B1E4A3BD800FC731F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
