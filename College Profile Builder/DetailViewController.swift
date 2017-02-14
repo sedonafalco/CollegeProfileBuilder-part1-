@@ -8,16 +8,16 @@
 
 import UIKit
 import RealmSwift
+import SafariServices
 
 class DetailViewController: UIViewController {
-
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var enrollmentTextField: UITextField!
+    @IBOutlet weak var websiteTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
    let realm = try! Realm()
-    
     var detailItem: Colleges? {
         didSet {
             // Update the view.
@@ -43,17 +43,26 @@ class DetailViewController: UIViewController {
                 nameTextField.text = college.name
                 locationTextField.text = college.location
                 enrollmentTextField.text = String(college.enrollment)
+                websiteTextField.text = college.website
                 imageView.image = UIImage(data: college.image)
-
             }
         }
     }
+    @IBAction func onTappedGoButton(_ sender: UIButton) {
+        let urlString = websiteTextField.text!
+        let url = URL(string: urlString)
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func onTappedSaveButton(_ sender: Any) {
         if let college = self.detailItem{
             try! realm.write ({
                 college.name = nameTextField.text!
                 college.location = locationTextField.text!
                 college.enrollment = Int(enrollmentTextField.text!)!
+                college.website = websiteTextField.text!
                 college.image = UIImagePNGRepresentation(imageView.image!)!
             })
         }

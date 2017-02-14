@@ -39,19 +39,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-wN-j2e">
-                                <rect key="frame" x="114" y="183" width="150" height="30"/>
+                                <rect key="frame" x="114" y="148" width="150" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-nw-FBA">
-                                <rect key="frame" x="114" y="133" width="150" height="30"/>
+                                <rect key="frame" x="114" y="110" width="150" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMq-0B-kPw">
-                                <rect key="frame" x="114" y="81" width="150" height="30"/>
+                                <rect key="frame" x="114" y="72" width="150" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -63,11 +63,28 @@
                                     <constraint firstAttribute="width" constant="250" id="zHv-gu-Kbk"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJv-ip-1k4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJv-ip-1k4">
                                 <rect key="frame" x="154" y="414" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="3Mh-jl-Xgt"/>
+                                    <constraint firstAttribute="height" constant="36" id="6TN-b6-K06"/>
+                                </constraints>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="onTappedSaveButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="2EC-vR-fJQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmN-ZB-dzA">
+                                <rect key="frame" x="114" y="186" width="150" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idB-TU-ZwF">
+                                <rect key="frame" x="272" y="186" width="46" height="30"/>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <action selector="onTappedGoButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="bLd-lN-PWb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,13 +96,23 @@
                             <constraint firstItem="9a3-nw-FBA" firstAttribute="leading" secondItem="VOy-wN-j2e" secondAttribute="leading" id="Aju-pR-Sn8"/>
                             <constraint firstItem="VOy-wN-j2e" firstAttribute="top" secondItem="9a3-nw-FBA" secondAttribute="bottom" constant="20" id="ByG-8X-I0u"/>
                             <constraint firstItem="9a3-nw-FBA" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="Lj7-vQ-b4y"/>
+                            <constraint firstItem="ZJv-ip-1k4" firstAttribute="top" secondItem="Zah-Qq-g3v" secondAttribute="bottom" constant="28" id="Llt-ay-632"/>
+                            <constraint firstItem="DmN-ZB-dzA" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="M82-2l-Mau"/>
                             <constraint firstItem="bMq-0B-kPw" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="OFl-wG-MdQ"/>
                             <constraint firstItem="9a3-nw-FBA" firstAttribute="top" secondItem="bMq-0B-kPw" secondAttribute="bottom" constant="22" id="QU6-03-9Vr"/>
-                            <constraint firstItem="ZJv-ip-1k4" firstAttribute="top" secondItem="Zah-Qq-g3v" secondAttribute="bottom" constant="28" id="QZA-lt-qXS"/>
+                            <constraint firstItem="Zah-Qq-g3v" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="Qrv-ef-U12"/>
+                            <constraint firstItem="VOy-wN-j2e" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="Qxr-EY-k7y"/>
+                            <constraint firstItem="ZJv-ip-1k4" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="cae-7V-ybr"/>
                             <constraint firstItem="VOy-wN-j2e" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="dZt-fr-tts"/>
                             <constraint firstItem="bMq-0B-kPw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="98" id="ed1-1a-vhc"/>
+                            <constraint firstItem="DmN-ZB-dzA" firstAttribute="leading" secondItem="VOy-wN-j2e" secondAttribute="leading" id="id4-Jd-iZS"/>
+                            <constraint firstItem="idB-TU-ZwF" firstAttribute="leading" secondItem="DmN-ZB-dzA" secondAttribute="trailing" constant="15" id="jdA-zE-AGp"/>
+                            <constraint firstItem="bMq-0B-kPw" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="kSW-vS-TFo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="idB-TU-ZwF" secondAttribute="trailing" constant="41" id="klz-fo-ibK"/>
                             <constraint firstItem="bMq-0B-kPw" firstAttribute="leading" secondItem="9a3-nw-FBA" secondAttribute="leading" id="mxF-6C-U2Y"/>
-                            <constraint firstItem="ZJv-ip-1k4" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="udl-nW-Quf"/>
+                            <constraint firstItem="9a3-nw-FBA" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="rBg-bH-Sag"/>
+                            <constraint firstItem="DmN-ZB-dzA" firstAttribute="top" secondItem="VOy-wN-j2e" secondAttribute="bottom" constant="8" symbolic="YES" id="u8U-t3-d00"/>
+                            <constraint firstItem="idB-TU-ZwF" firstAttribute="top" secondItem="DmN-ZB-dzA" secondAttribute="top" id="uIu-eU-NnO"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -95,6 +122,7 @@
                         <outlet property="imageView" destination="Zah-Qq-g3v" id="Uts-S9-h2C"/>
                         <outlet property="locationTextField" destination="9a3-nw-FBA" id="vEI-gc-O53"/>
                         <outlet property="nameTextField" destination="bMq-0B-kPw" id="XII-St-cbd"/>
+                        <outlet property="websiteTextField" destination="DmN-ZB-dzA" id="ufQ-Rs-PXV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
