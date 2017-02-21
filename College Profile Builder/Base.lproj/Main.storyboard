@@ -63,17 +63,6 @@
                                     <constraint firstAttribute="width" constant="250" id="zHv-gu-Kbk"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJv-ip-1k4">
-                                <rect key="frame" x="154" y="414" width="67" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="3Mh-jl-Xgt"/>
-                                    <constraint firstAttribute="height" constant="36" id="6TN-b6-K06"/>
-                                </constraints>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="onTappedSaveButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="2EC-vR-fJQ"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmN-ZB-dzA">
                                 <rect key="frame" x="114" y="186" width="150" height="30"/>
                                 <nil key="textColor"/>
@@ -87,11 +76,43 @@
                                     <action selector="onTappedGoButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="bLd-lN-PWb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcr-Ir-Aa4">
+                                <rect key="frame" x="198" y="393" width="116" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="3E1-s0-6y4"/>
+                                    <constraint firstAttribute="height" constant="39" id="5EI-99-bqd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onLibraryButtonTapped:" destination="JEX-9P-axG" eventType="touchUpInside" id="scU-u0-vQp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfM-gX-ZFV">
+                                <rect key="frame" x="64" y="392" width="116" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="AVa-6J-bbm"/>
+                                    <constraint firstAttribute="height" constant="39" id="hIk-36-9mp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onCameraButtonTapped:" destination="JEX-9P-axG" eventType="touchUpInside" id="EUq-AI-3K3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJv-ip-1k4">
+                                <rect key="frame" x="154" y="440" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="3Mh-jl-Xgt"/>
+                                    <constraint firstAttribute="height" constant="36" id="6TN-b6-K06"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSaveButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="2EC-vR-fJQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Zah-Qq-g3v" firstAttribute="top" secondItem="VOy-wN-j2e" secondAttribute="bottom" constant="23" id="0s2-eK-4tD"/>
-                            <constraint firstItem="bMq-0B-kPw" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="17" id="9bk-uB-QdU"/>
                             <constraint firstItem="VOy-wN-j2e" firstAttribute="centerX" secondItem="Zah-Qq-g3v" secondAttribute="centerX" id="9yh-65-KYt"/>
                             <constraint firstItem="9a3-nw-FBA" firstAttribute="leading" secondItem="VOy-wN-j2e" secondAttribute="leading" id="Aju-pR-Sn8"/>
                             <constraint firstItem="VOy-wN-j2e" firstAttribute="top" secondItem="9a3-nw-FBA" secondAttribute="bottom" constant="20" id="ByG-8X-I0u"/>
@@ -102,6 +123,7 @@
                             <constraint firstItem="9a3-nw-FBA" firstAttribute="top" secondItem="bMq-0B-kPw" secondAttribute="bottom" constant="22" id="QU6-03-9Vr"/>
                             <constraint firstItem="Zah-Qq-g3v" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="Qrv-ef-U12"/>
                             <constraint firstItem="VOy-wN-j2e" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="Qxr-EY-k7y"/>
+                            <constraint firstItem="bMq-0B-kPw" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="17" id="Y3b-LX-tg5"/>
                             <constraint firstItem="ZJv-ip-1k4" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="cae-7V-ybr"/>
                             <constraint firstItem="VOy-wN-j2e" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="dZt-fr-tts"/>
                             <constraint firstItem="bMq-0B-kPw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="98" id="ed1-1a-vhc"/>
