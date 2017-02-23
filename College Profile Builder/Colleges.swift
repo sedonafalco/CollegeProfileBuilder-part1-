@@ -24,6 +24,7 @@ class Colleges: Object {
         self.location = location
         self.enrollment = enrollment
         self.image = image
+        self.website = website
     }
 
 }

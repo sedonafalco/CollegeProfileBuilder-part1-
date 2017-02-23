@@ -59,7 +59,7 @@ class MasterViewController: UITableViewController {
             textField.keyboardType = UIKeyboardType.numberPad
         }
         alert.addTextField { (textField) in
-            textField.placeholder = "website"
+            textField.placeholder = "Website"
             textField.keyboardType = UIKeyboardType.URL
 
         }
@@ -68,7 +68,7 @@ class MasterViewController: UITableViewController {
         alert.addAction(cancelAction)
         
         
-        let insertAction = UIAlertAction(title:"add", style: .default) { (action) in
+        let insertAction = UIAlertAction(title:"Add", style: .default) { (action) in
             let nameTextField = alert.textFields![0] as UITextField
             let locationTextField = alert.textFields![1] as UITextField
             let enrollmentTextField = alert.textFields![2] as UITextField
@@ -80,7 +80,8 @@ class MasterViewController: UITableViewController {
                 let college = Colleges(name: nameTextField.text!,
                                     location: locationTextField.text!,
                                     enrollment: enrollment,
-                                    image: UIImagePNGRepresentation(image)!, website: websiteTextField.text!)
+                                    image: UIImagePNGRepresentation(image)!,
+                                    website: websiteTextField.text!)
                 self.objects.append(college)
                 try! self.realm.write {
                     self.realm.add(college)
