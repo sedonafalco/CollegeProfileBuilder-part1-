@@ -20,6 +20,7 @@
 		0B9DCF101E4DF20100FC731F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9DCF0E1E4DF20100FC731F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B9DCF131E4DF20500FC731F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9DCF121E4DF20500FC731F /* RealmSwift.framework */; };
 		0B9DCF141E4DF20500FC731F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9DCF121E4DF20500FC731F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0BA7B00F1E706F5100B03A02 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7B00E1E706F5100B03A02 /* MapKitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		0B9DCF0C1E4B85CF00FC731F /* Colleges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colleges.swift; sourceTree = "<group>"; };
 		0B9DCF0E1E4DF20100FC731F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		0B9DCF121E4DF20500FC731F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		0BA7B00E1E706F5100B03A02 /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				0B9DCEDC1E4A3BD700FC731F /* AppDelegate.swift */,
-				0B9DCEDE1E4A3BD800FC731F /* MasterViewController.swift */,
-				0B9DCEE01E4A3BD800FC731F /* DetailViewController.swift */,
 				0B9DCF0C1E4B85CF00FC731F /* Colleges.swift */,
+				0B9DCEE01E4A3BD800FC731F /* DetailViewController.swift */,
+				0BA7B00E1E706F5100B03A02 /* MapKitViewController.swift */,
 				0B9DCEE21E4A3BD800FC731F /* Main.storyboard */,
+				0B9DCEDE1E4A3BD800FC731F /* MasterViewController.swift */,
 				0B9DCEE51E4A3BD800FC731F /* Assets.xcassets */,
 				0B9DCEE71E4A3BD800FC731F /* LaunchScreen.storyboard */,
 				0B9DCEEA1E4A3BD800FC731F /* Info.plist */,
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B9DCEE11E4A3BD800FC731F /* DetailViewController.swift in Sources */,
+				0BA7B00F1E706F5100B03A02 /* MapKitViewController.swift in Sources */,
 				0B9DCEDF1E4A3BD800FC731F /* MasterViewController.swift in Sources */,
 				0B9DCEDD1E4A3BD700FC731F /* AppDelegate.swift in Sources */,
 				0B9DCF0D1E4B85CF00FC731F /* Colleges.swift in Sources */,

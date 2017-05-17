@@ -58,6 +58,15 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! MapKitViewController
+        if let college = self.detailItem {
+            dvc.college = college
+        }
+        }
+    
+    
     @IBAction func onTappedGoButton(_ sender: UIButton) {
         let urlString = websiteTextField.text!
         let url = URL(string: urlString)
@@ -88,6 +97,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         present(imagePicker, animated: true, completion: nil)
 
+    }
+    @IBAction func goButtonTappedMapKit(_ sender: Any) {
+        
     }
 }
 

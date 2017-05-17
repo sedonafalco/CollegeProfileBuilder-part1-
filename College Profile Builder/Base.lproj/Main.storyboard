@@ -41,13 +41,13 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-wN-j2e">
                                 <rect key="frame" x="114" y="148" width="150" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-nw-FBA">
                                 <rect key="frame" x="114" y="110" width="150" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMq-0B-kPw">
@@ -115,6 +115,15 @@
                                     <action selector="onTappedSaveButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="2EC-vR-fJQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYJ-gp-YMf">
+                                <rect key="frame" x="272" y="110" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goButtonTappedMapKit:" destination="JEX-9P-axG" eventType="touchUpInside" id="ZKc-h6-ikr"/>
+                                    <segue destination="H4T-Kr-jhK" kind="show" id="yoF-F3-y5H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -164,6 +173,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="128.18590704647679"/>
+        </scene>
+        <!--Map Kit View Controller-->
+        <scene sceneID="JNE-BW-6cM">
+            <objects>
+                <viewController id="H4T-Kr-jhK" customClass="MapKitViewController" customModule="College_Profile_Builder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wkr-aR-Jip"/>
+                        <viewControllerLayoutGuide type="bottom" id="llq-ju-1dB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="weu-Q8-Zol" customClass="MKMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HUx-QG-08v">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HUx-QG-08v" firstAttribute="leading" secondItem="weu-Q8-Zol" secondAttribute="leading" id="Kfp-Xw-1cv"/>
+                            <constraint firstItem="llq-ju-1dB" firstAttribute="top" secondItem="HUx-QG-08v" secondAttribute="bottom" id="dqR-UO-lc1"/>
+                            <constraint firstAttribute="trailing" secondItem="HUx-QG-08v" secondAttribute="trailing" id="kJW-bP-VnH"/>
+                            <constraint firstItem="HUx-QG-08v" firstAttribute="top" secondItem="Wkr-aR-Jip" secondAttribute="bottom" id="oCO-WR-tka"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="LZQ-iZ-toK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="laE-Y2-Oux">
+                            <connections>
+                                <action selector="showSearchBar:" destination="H4T-Kr-jhK" id="Hg7-8p-aQf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="HUx-QG-08v" id="MgJ-ed-XYb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kHu-jm-tm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="d5a-CE-1aj"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="128"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
